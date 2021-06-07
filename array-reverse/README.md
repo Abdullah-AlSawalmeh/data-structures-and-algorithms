@@ -8,7 +8,7 @@ Create a function the reverse an array, without using any built-in array
 
 <!-- Embedded whiteboard image -->
 
-https://github.com/Abdullah-AlSawalmeh/data-structures-and-algorithms/blob/array-reverse/array-shift/whiteboard.md
+https://github.com/Abdullah-AlSawalmeh/data-structures-and-algorithms/blob/array-shift/array-reverse/whiteboard.md
 
 ## Approach & Efficiency
 
