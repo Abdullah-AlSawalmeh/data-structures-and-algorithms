@@ -16,3 +16,7 @@ https://github.com/Abdullah-AlSawalmeh/data-structures-and-algorithms/blob/array
 
 I used the swapping approach, it saves time, and less for loops.  
 Time Complexity = O(n/2) = O(n) <br><br>
+
+## Note:
+
+I used most of the instructor code for this challenge.
