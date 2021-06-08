@@ -8,7 +8,7 @@ Create a function that takes 2 parameters, a sorted array and the search key. Wi
 
 <!-- Embedded whiteboard image -->
 
-![Binary Search](BinarySearch.png)
+![Binary Search](BinarySearch2.png)
 
 ## Approach & Efficiency
 
