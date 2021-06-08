@@ -8,7 +8,7 @@ Create a function that takes in a value and and array, return a new array with t
 
 <!-- Embedded whiteboard image -->
 
-https://github.com/Abdullah-AlSawalmeh/data-structures-and-algorithms/blob/array-shift/array-shift/whiteboard.md
+https://abdullah-alsawalmeh.github.io/data-structures-and-algorithms/array-shift/whiteboard
 
 ## Approach & Efficiency
 
