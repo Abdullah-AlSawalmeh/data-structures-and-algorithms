@@ -64,7 +64,6 @@ class LinkedList:
             return
         current = self.head
         while current.next is not None:
-            print(current.next.value)      
             if current.next.value == value:
                 break
             current = current.next  

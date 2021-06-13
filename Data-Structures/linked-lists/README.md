@@ -53,3 +53,7 @@ Space: O(1)
 **InsertAfter:**
 Time: O(n)  
 Space: O(1)
+
+## WhiteBoard
+
+![Linked_Lists](linked_lists_insert_before_after.png)
