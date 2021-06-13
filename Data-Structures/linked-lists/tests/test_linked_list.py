@@ -1,5 +1,6 @@
 from linked_list import __version__
 from linked_list.linked_list import LinkedList , Node
+import pytest
 
 
 def test_version():
@@ -68,3 +69,45 @@ def test_print():
     LL.insert(2)
     LL.insert(1)
     assert str(LL) == '{ 1 } -> { 2 } -> { 3 } -> { 4 } -> { 5 } -> { 6 } -> Null'
+
+
+def test_insert_Before_1(one_band):
+    one_band.insertBefore(3, 5)
+    assert one_band.head.next.value is 5
+def test_insert_Before_2(one_band):
+    one_band.insertBefore(1, 5)
+    assert one_band.head.value is 5
+def test_insert_Before_3(one_band):
+    one_band.insertBefore(2, 5)
+    assert one_band.head.next.next.value is 5
+def test_insert_Before_4(one_band):
+    with pytest.raises(ValueError):
+        one_band.insertBefore(4, 5)
+
+def test_insert_After_1(one_band):
+    one_band.insertAfter(3, 5)
+    assert one_band.head.next.next.value is 5
+def test_insert_After_2(one_band):
+    one_band.insertAfter(2, 5)
+    assert one_band.head.next.next.next.value is 5
+def test_insert_After_3():
+    LL = LinkedList()
+    LL.append(1)
+    LL.append(2)
+    LL.append(2)
+    LL.insertAfter(2, 5)
+    assert LL.head.next.next.value is 5
+def test_insert_After_4(one_band):
+    with pytest.raises(ValueError):
+        one_band.insertAfter(4, 5)
+    
+
+
+@pytest.fixture
+def one_band():
+    LL = LinkedList()
+    LL.append(1)
+    LL.append(3)
+    LL.append(2)
+    return LL
+

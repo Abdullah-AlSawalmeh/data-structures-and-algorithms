@@ -41,6 +41,40 @@ class LinkedList:
                 current = current.next
             current.next = node
 
+    def insertAfter(self,value,newVal):
+        current = self.head
+        while current is not None:
+            if value==current.value:
+                break
+            current = current.next
+        if current is None:
+            raise ValueError("node is not presesnt in LL")
+        else:
+            node = Node(newVal)
+            node.next = current.next
+            current.next = node
+        
+    def insertBefore(self,value,newVal):
+        if self.head is None:
+            raise ValueError("Linked List is empty!")
+        if self.head.value==value:
+            node = Node(newVal)
+            node.next = self.head
+            self.head = node
+            return
+        current = self.head
+        while current.next is not None:
+            print(current.next.value)      
+            if current.next.value == value:
+                break
+            current = current.next  
+        if current.next is None:
+            raise ValueError("Node is not found!")
+        else:
+            node = Node(newVal)
+            node.next = current.next
+            current.next = node     
+
     def includes(self,data):
         """
         Checks if the value exist in the LL or not.
@@ -62,14 +96,20 @@ class LinkedList:
         return returned
 
 if __name__ == "__main__":
-    LL = LinkedList()
-    print(LL)
-    LL.append(4)
-    LL.append(5)
-    LL.append(6)
-    LL.insert(3)
-    LL.insert(2)
-    LL.insert(1)
-    print(LL)
-    print(LL.includes(4))
+    # LL = LinkedList()
+    # print(LL)
+    # LL.append(4)
+    # LL.append(5)
+    # LL.append(6)
+    # LL.insert(3)
+    # LL.insert(2)
+    # LL.insert(1)
+    # print(LL)
+    # print(LL.includes(4))
     # print(str(LL))
+    LL = LinkedList()
+    LL.append(1)
+    LL.append(2)
+    LL.append(2)
+    LL.insertAfter(2, 5)
+    print(str(LL))
