@@ -47,3 +47,9 @@ Space: O(1)
 **Insert:**
 Time: O(1)  
 Space: O(1)
+**InsertBefore:**
+Time: O(n)  
+Space: O(1)
+**InsertAfter:**
+Time: O(n)  
+Space: O(1)
