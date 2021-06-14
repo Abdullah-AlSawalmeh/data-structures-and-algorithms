@@ -94,6 +94,23 @@ class LinkedList:
                     current = current.next
         return returned
 
+    def kth_from_end(self, k):
+        if k < 0:
+            raise ValueError("input positive number")
+        else:
+            counter = -1
+            current = self.head
+            while current:
+                current = current.next
+                counter = counter + 1
+            if counter >= k:
+                current = self.head
+                for i in range(counter - k):
+                    current = current.next
+                return current.value
+            else:
+                raise ValueError("Node is not found!")
+
 if __name__ == "__main__":
     # LL = LinkedList()
     # print(LL)
@@ -108,7 +125,7 @@ if __name__ == "__main__":
     # print(str(LL))
     LL = LinkedList()
     LL.append(1)
-    LL.append(2)
-    LL.append(2)
-    LL.insertAfter(2, 5)
-    print(str(LL))
+    # LL.append(3)
+    # LL.append(8)
+    # LL.append(2)
+    print(LL.kth_from_end(1))

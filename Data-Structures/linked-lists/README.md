@@ -53,7 +53,14 @@ Space: O(1)
 **InsertAfter:**
 Time: O(n)  
 Space: O(1)
+**kth_from_end**
+Time: O(n)  
+Space: O(n)
 
 ## WhiteBoard
 
-![Linked_Lists](linked_lists_insert_before_after.png)
+insertBefore_insertAfter  
+![Linked_Lists_insertBefore_insertAfter](linked_lists_insert_before_after.png)
+
+kth-from-end  
+![Linked_Lists_ll_kth_from_end](kth-from-end.png)

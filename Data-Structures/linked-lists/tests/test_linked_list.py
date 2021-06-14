@@ -71,25 +71,25 @@ def test_print():
     assert str(LL) == '{ 1 } -> { 2 } -> { 3 } -> { 4 } -> { 5 } -> { 6 } -> Null'
 
 
-def test_insert_Before_1(one_band):
-    one_band.insertBefore(3, 5)
-    assert one_band.head.next.value is 5
-def test_insert_Before_2(one_band):
-    one_band.insertBefore(1, 5)
-    assert one_band.head.value is 5
-def test_insert_Before_3(one_band):
-    one_band.insertBefore(2, 5)
-    assert one_band.head.next.next.value is 5
-def test_insert_Before_4(one_band):
+def test_insert_Before_1(linked_list_1):
+    linked_list_1.insertBefore(3, 5)
+    assert linked_list_1.head.next.value is 5
+def test_insert_Before_2(linked_list_1):
+    linked_list_1.insertBefore(1, 5)
+    assert linked_list_1.head.value is 5
+def test_insert_Before_3(linked_list_1):
+    linked_list_1.insertBefore(2, 5)
+    assert linked_list_1.head.next.next.value is 5
+def test_insert_Before_4(linked_list_1):
     with pytest.raises(ValueError):
-        one_band.insertBefore(4, 5)
+        linked_list_1.insertBefore(4, 5)
 
-def test_insert_After_1(one_band):
-    one_band.insertAfter(3, 5)
-    assert one_band.head.next.next.value is 5
-def test_insert_After_2(one_band):
-    one_band.insertAfter(2, 5)
-    assert one_band.head.next.next.next.value is 5
+def test_insert_After_1(linked_list_1):
+    linked_list_1.insertAfter(3, 5)
+    assert linked_list_1.head.next.next.value is 5
+def test_insert_After_2(linked_list_1):
+    linked_list_1.insertAfter(2, 5)
+    assert linked_list_1.head.next.next.next.value is 5
 def test_insert_After_3():
     LL = LinkedList()
     LL.append(1)
@@ -97,17 +97,39 @@ def test_insert_After_3():
     LL.append(2)
     LL.insertAfter(2, 5)
     assert LL.head.next.next.value is 5
-def test_insert_After_4(one_band):
+def test_insert_After_4(linked_list_1):
     with pytest.raises(ValueError):
-        one_band.insertAfter(4, 5)
+        linked_list_1.insertAfter(4, 5)
+
+
+def test_kth_from_end_1(linked_list_2):
+    actual = linked_list_2.kth_from_end(0)
+    expected = 2
+    assert actual == expected
+    assert linked_list_2.kth_from_end(2) == 3
+def test_kth_from_end_2(linked_list_2):
+    with pytest.raises(ValueError):
+        linked_list_2.kth_from_end(6)
+        linked_list_2.kth_from_end(-1)
+        linked_list_2.kth_from_end(4)
+
+
     
 
 
 @pytest.fixture
-def one_band():
+def linked_list_1():
     LL = LinkedList()
     LL.append(1)
     LL.append(3)
     LL.append(2)
     return LL
 
+@pytest.fixture
+def linked_list_2():
+    LL = LinkedList()
+    LL.append(1)
+    LL.append(3)
+    LL.append(8)
+    LL.append(2)
+    return LL
