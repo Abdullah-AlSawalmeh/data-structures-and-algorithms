@@ -56,6 +56,9 @@ Space: O(1)
 **kth_from_end**
 Time: O(n)  
 Space: O(n)
+**ll_zip**
+Time: O(n)  
+Space: O(1)
 
 ## WhiteBoard
 
@@ -64,3 +67,6 @@ insertBefore_insertAfter
 
 kth-from-end  
 ![Linked_Lists_ll_kth_from_end](kth-from-end.png)
+
+ll_zip  
+![ll_zip](ll_zip.png)

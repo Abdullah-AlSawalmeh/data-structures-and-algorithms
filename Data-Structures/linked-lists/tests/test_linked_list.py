@@ -1,3 +1,4 @@
+from challenges.ll_zip.ll_zip import zipLists
 from linked_list import __version__
 from linked_list.linked_list import LinkedList , Node
 import pytest
@@ -70,7 +71,7 @@ def test_print():
     LL.insert(1)
     assert str(LL) == '{ 1 } -> { 2 } -> { 3 } -> { 4 } -> { 5 } -> { 6 } -> Null'
 
-
+######################################## insert before ##########################################
 def test_insert_Before_1(linked_list_1):
     linked_list_1.insertBefore(3, 5)
     assert linked_list_1.head.next.value is 5
@@ -84,6 +85,7 @@ def test_insert_Before_4(linked_list_1):
     with pytest.raises(ValueError):
         linked_list_1.insertBefore(4, 5)
 
+######################################## insert after ##########################################
 def test_insert_After_1(linked_list_1):
     linked_list_1.insertAfter(3, 5)
     assert linked_list_1.head.next.next.value is 5
@@ -101,7 +103,7 @@ def test_insert_After_4(linked_list_1):
     with pytest.raises(ValueError):
         linked_list_1.insertAfter(4, 5)
 
-
+######################################## kth_from_end ##########################################
 def test_kth_from_end_1(linked_list_2):
     actual = linked_list_2.kth_from_end(0)
     expected = 2
@@ -113,10 +115,36 @@ def test_kth_from_end_2(linked_list_2):
         linked_list_2.kth_from_end(-1)
         linked_list_2.kth_from_end(4)
 
+############################################# ll_zip ##########################################
+def test_ll_zip_1(linked_list_3,linked_list_4):
+    linked_list_3.append(2)
+    linked_list_4.append(4)
+    assert str(zipLists(linked_list_3,linked_list_4)) == '{ 1 } -> { 5 } -> { 3 } -> { 9 } -> { 2 } -> { 4 } -> Null'
+def test_ll_zip_2(linked_list_3,linked_list_4):
+    linked_list_4.append(4)
+    assert str(zipLists(linked_list_3,linked_list_4)) == '{ 1 } -> { 5 } -> { 3 } -> { 9 } -> { 4 } -> Null'
+def test_ll_zip_3(linked_list_3,linked_list_4):
+    linked_list_3.append(2)
+    assert str(zipLists(linked_list_3,linked_list_4)) == '{ 1 } -> { 5 } -> { 3 } -> { 9 } -> { 2 } -> Null'
+def test_ll_zip_4():
+    LL1 = LinkedList()
+    LL2 = LinkedList()
+    assert str(zipLists(LL1,LL2)) == 'None'
+def test_ll_zip_5():
+    LL1 = LinkedList()
+    LL1.append(1)
+    LL2 = LinkedList()
+    assert str(zipLists(LL1,LL2)) == '{ 1 } -> Null'
+def test_ll_zip_6():
+    LL1 = LinkedList()
+    LL2 = LinkedList()
+    LL2.append(1)
+    assert str(zipLists(LL1,LL2)) == '{ 1 } -> Null'
+
 
     
 
-
+######################################## fixtures ##########################################
 @pytest.fixture
 def linked_list_1():
     LL = LinkedList()
@@ -132,4 +160,19 @@ def linked_list_2():
     LL.append(3)
     LL.append(8)
     LL.append(2)
+    return LL
+
+
+@pytest.fixture
+def linked_list_3():
+    LL = LinkedList()
+    LL.append(1)
+    LL.append(3)
+    return LL
+
+@pytest.fixture
+def linked_list_4():
+    LL = LinkedList()
+    LL.append(5)
+    LL.append(9)
     return LL
