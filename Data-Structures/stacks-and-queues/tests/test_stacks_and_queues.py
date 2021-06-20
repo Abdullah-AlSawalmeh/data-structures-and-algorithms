@@ -1,4 +1,5 @@
 from stacks_and_queues.stacks_and_queues import *
+from challenges.PseudoQueue import *
 import pytest
 
 
@@ -64,6 +65,22 @@ def test_dequeue_empty_stack():
         queue = Queue()
         assert queue.dequeue()
 
+def test_pseudoqueue():
+    my_queue = PseudoQueue()
+    my_queue.enqueue(20)
+    my_queue.enqueue(15)
+    my_queue.enqueue(10)
+    my_queue.enqueue(5)
+
+    assert my_queue.dequeue() == 20
+    assert my_queue.dequeue() == 15
+    assert my_queue.dequeue() == 10
+    assert my_queue.dequeue() == 5
+
+def test_pseudoqueue_empty():
+    my_queue = PseudoQueue()
+    my_queue.enqueue(5)
+    assert my_queue.dequeue() == 5
 
 
 
