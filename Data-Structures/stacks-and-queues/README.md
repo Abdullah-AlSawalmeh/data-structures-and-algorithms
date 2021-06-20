@@ -65,6 +65,7 @@ Define pop, push, peak and isempty for stack and enqueue, dequeue, peak and isem
 
 ![](https://image.slidesharecdn.com/20140710stackqueue-150112072633-conversion-gate01/95/basic-data-structure-stackqueue-40-638.jpg?cb=1421047682)
 
-```
+# WhiteBoards
 
-```
+Pseudo Queue
+![PseudoQueue.png](PseudoQueue.png)
