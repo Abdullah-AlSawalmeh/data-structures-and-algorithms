@@ -1,6 +1,7 @@
 from stacks_and_queues.stacks_and_queues import *
 from challenges.PseudoQueue import *
 from challenges.fifo_animal_shelter import *
+from challenges.multi_bracket_validation import *
 import pytest
 
 
@@ -112,6 +113,18 @@ def test_AnimalShelter_enqueue():
     assert animals.dequeue(dog) == 'dog'
     assert animals.dequeue(dog) == 'Your input is not in the Animal shelter'
 
+
+def test_multi_bracket():
+    assert multi_bracket_validation('[]()[]') == True
+    assert multi_bracket_validation('{}') == True
+    assert multi_bracket_validation('{}(){}') == True
+    assert multi_bracket_validation('()[[Extra Characters]]') == True
+    assert multi_bracket_validation('(){}[[]]') == True
+    assert multi_bracket_validation('{}{Code}[Fellows](())') == True
+    assert multi_bracket_validation('[({}]') == False
+    assert multi_bracket_validation('(](') == False
+    assert multi_bracket_validation('{(})') == False
+    
 
 
 
