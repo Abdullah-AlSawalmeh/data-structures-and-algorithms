@@ -1,5 +1,6 @@
 from stacks_and_queues.stacks_and_queues import *
 from challenges.PseudoQueue import *
+from challenges.fifo_animal_shelter import *
 import pytest
 
 
@@ -81,6 +82,35 @@ def test_pseudoqueue_empty():
     my_queue = PseudoQueue()
     my_queue.enqueue(5)
     assert my_queue.dequeue() == 5
+
+
+def test_AnimalShelter_enqueue():
+    animals = AnimalShelter()
+    assert animals.enqueue(cat)
+    assert animals.front.name == 'cat'
+    assert animals.rear.name == 'cat'
+    assert animals.enqueue(dog)
+    assert animals.front.name == 'cat'
+    assert animals.rear.name == 'dog'
+    assert animals.Animal_enqueue('elephant') == 'Add dog or cat'
+    assert animals.front.name == 'cat'
+    assert animals.rear.name == 'dog'
+
+
+def test_AnimalShelter_enqueue():
+    animals = AnimalShelter()
+    assert animals.dequeue('human') == 'Your input is not in the Animal shelter'
+    assert animals.dequeue(cat) == 'Your input is not in the Animal shelter'
+    animals.enqueue(cat)
+    animals.enqueue(dog)
+    animals.enqueue(cat)
+    animals.enqueue(dog)
+    assert animals.dequeue(cat) == 'cat'
+    assert animals.dequeue(cat) == 'cat'
+    assert animals.dequeue(cat) == 'Your input is not in the Animal shelter'
+    assert animals.dequeue(dog) == 'dog'
+    assert animals.dequeue(dog) == 'dog'
+    assert animals.dequeue(dog) == 'Your input is not in the Animal shelter'
 
 
 

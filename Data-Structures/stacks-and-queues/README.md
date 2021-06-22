@@ -1,7 +1,5 @@
 # Stacks and Queues
 
-<!-- Short summary or background information -->
-
 ### About Stacks
 
 - A stack is a data structure that consists of Nodes. Each Node references the next Node in the stack, but does not reference its previous.
@@ -67,5 +65,8 @@ Define pop, push, peak and isempty for stack and enqueue, dequeue, peak and isem
 
 # WhiteBoards
 
-Pseudo Queue
+Pseudo Queue  
 ![PseudoQueue.png](PseudoQueue.png)
+
+Animal Shelter  
+![Animal_Shelter.png](Animal_Shelter.png)

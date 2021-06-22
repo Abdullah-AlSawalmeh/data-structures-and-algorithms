@@ -21,14 +21,18 @@ class PseudoQueue:
 
 my_queue = PseudoQueue()
 my_queue.enqueue(10)
+print(my_queue.dequeue())
 my_queue.enqueue(15)
-my_queue.enqueue(20)
-my_queue.enqueue(5)
+print(my_queue.dequeue())
 
-print(my_queue.dequeue())
-print(my_queue.dequeue())
-print(my_queue.dequeue())
-print(my_queue.dequeue())
+
+# my_queue.enqueue(20)
+# my_queue.enqueue(5)
+
+# print(my_queue.dequeue())
+# print(my_queue.dequeue())
+# print(my_queue.dequeue())
+# print(my_queue.dequeue())
 
 
 
