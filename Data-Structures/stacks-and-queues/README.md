@@ -66,7 +66,10 @@ Define pop, push, peak and isempty for stack and enqueue, dequeue, peak and isem
 # WhiteBoards
 
 Pseudo Queue  
-![PseudoQueue.png](PseudoQueue.png)
+![PseudoQueue](PseudoQueue.png)
 
 Animal Shelter  
-![Animal_Shelter.png](Animal_Shelter.png)
+![Animal_Shelter](Animal_Shelter.png)
+
+multi bracket validation
+![multi_bracket_validation](multi_bracket_validation.png)
