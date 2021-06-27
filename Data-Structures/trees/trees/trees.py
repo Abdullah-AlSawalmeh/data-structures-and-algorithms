@@ -98,6 +98,10 @@ class BinarySearchTree(BinaryTree):
         except:
             print("There is an error")
 
+    def find_maximum_value():
+        pass
+
+
 
 
 
