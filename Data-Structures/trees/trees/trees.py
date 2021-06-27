@@ -53,6 +53,30 @@ class BinaryTree:
         except:
             print("There is an error")
 
+    # def find_maximum_value(self):
+    #     self.find_maximum_value_print(self.root)
+
+    def find_maximum_value(self):
+        try:
+            max_number=0
+            def inner_def(current):
+                nonlocal max_number
+                if current.value > max_number :
+                    max_number = current.value
+
+                if current.left:
+                    inner_def(current.left)
+                if current.right:
+                    inner_def(current.right) 
+            
+            inner_def(self.root)
+            return max_number
+        except:
+            return 'An error occured'  
+
+
+
+
 class BinarySearchTree(BinaryTree):
     def Add(self,value):
         try:
@@ -98,21 +122,35 @@ class BinarySearchTree(BinaryTree):
         except:
             print("There is an error")
 
-    def find_maximum_value():
-        pass
-
 
 
 
 
 if __name__ == "__main__":
-    tree = BinarySearchTree()
-    tree.Add(5)
-    tree.Add(10)
-    tree.Add(4)
-    tree.Add(2)
-    tree.Add(3)
-    tree.Add(20)
+    # tree = BinarySearchTree()
+    # tree.Add(5)
+    # tree.Add(10)
+    # tree.Add(4)
+    # tree.Add(2)
+    # tree.Add(3)
+    # tree.Add(20)
+    tree = BinaryTree()
+    # tree.root = Node(10)
+    # tree.root.left = Node(7)
+    # tree.root.right = Node(13)
+    # tree.root.left.left = Node(12)
+    # tree.root.left.right = Node(47)
+    # tree.root.right.left = Node(8)
+    tree.root = Node(2)
+    tree.root.left = Node(7)
+    tree.root.left.left = Node(2)
+    tree.root.left.right = Node(6)
+    tree.root.left.right.left = Node(5)
+    tree.root.left.right.right = Node(11)
+    tree.root.right = Node(5)
+    tree.root.right.right = Node(9)
+    tree.root.right.right.left = Node(4)
 
     print(tree.print_tree("inorder"))
-    print(tree.Contains(3))
+    print(tree.find_maximum_value())
+    # print(tree.Contains(3))
