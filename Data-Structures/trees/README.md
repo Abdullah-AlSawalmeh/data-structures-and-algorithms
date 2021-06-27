@@ -13,6 +13,16 @@ A tree is a nonlinear data structure, compared to arrays, linked lists, stacks a
   - Argument: value
   - Returns: boolean indicating whether or not the value is in the tree at least once.
 
+## Challenge 16
+
+Write the following method for the Binary Tree class
+
+- find maximum value
+  - Arguments: none
+  - Returns: number
+
+Find the maximum value stored in the tree. You can assume that the values stored in the Binary Tree will be numeric.
+
 ## Approach & Efficiency
 
 ### Depth First
@@ -26,6 +36,7 @@ A tree is a nonlinear data structure, compared to arrays, linked lists, stacks a
 ### Big O in Trees
 
 - The Big O time complexity of a Binary Search Tree’s insertion and search operations is O(h), or O(height). In the worst case, we will have to search all the way down to a leaf, which will require searching through as many nodes as the tree is tall. In a balanced (or “perfect”) tree, the height of the tree is log(n). In an unbalanced tree, the worst case height of the tree is n.
+- Find max value: O(1) space/ O(n) time
 
 ### Binary Search Trees
 
@@ -43,3 +54,11 @@ A Binary Search Tree (BST) is a type of tree that does have some structure attac
 - Contains
   - Argument: value
   - Returns: boolean indicating whether or not the value is in the tree at least once.
+- find maximum value
+  - Arguments: none
+  - Returns: number
+
+## Whiteboard Process
+
+Find maximum value  
+![find maximum value](find_maximum_value.png)
