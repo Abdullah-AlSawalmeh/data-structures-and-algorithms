@@ -3,7 +3,7 @@ class Node:
         self.value = value
         self.left = None
         self.right = None
-
+        self.next = None
 
 class BinaryTree:
     def __init__(self):
@@ -74,9 +74,6 @@ class BinaryTree:
         except:
             return 'An error occured'  
 
-
-
-
 class BinarySearchTree(BinaryTree):
     def Add(self,value):
         try:
@@ -125,7 +122,6 @@ class BinarySearchTree(BinaryTree):
 
 
 
-
 if __name__ == "__main__":
     # tree = BinarySearchTree()
     # tree.Add(5)
@@ -149,8 +145,13 @@ if __name__ == "__main__":
     tree.root.left.right.right = Node(11)
     tree.root.right = Node(5)
     tree.root.right.right = Node(9)
+    tree.root.right.right.right = Node(5)
     tree.root.right.right.left = Node(4)
+    tree.root.right.right.left.left = Node(16)
+    tree.root.left.right.right.right = Node(17)
 
-    print(tree.print_tree("inorder"))
-    print(tree.find_maximum_value())
+    # print(tree.print_tree("inorder"))
+    # print(tree.print_tree("length"))
+    # print(tree.find_maximum_value())
     # print(tree.Contains(3))
+    # print(breadth_first(tree))

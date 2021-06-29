@@ -23,6 +23,14 @@ Write the following method for the Binary Tree class
 
 Find the maximum value stored in the tree. You can assume that the values stored in the Binary Tree will be numeric.
 
+## Challenge 17
+
+Write a function called breadth first
+
+- Breadth first
+  - Arguments: tree
+  - Return: list of all values in the tree, in the order they were encountered
+
 ## Approach & Efficiency
 
 ### Depth First
@@ -36,7 +44,8 @@ Find the maximum value stored in the tree. You can assume that the values stored
 ### Big O in Trees
 
 - The Big O time complexity of a Binary Search Tree’s insertion and search operations is O(h), or O(height). In the worst case, we will have to search all the way down to a leaf, which will require searching through as many nodes as the tree is tall. In a balanced (or “perfect”) tree, the height of the tree is log(n). In an unbalanced tree, the worst case height of the tree is n.
-- Find max value: O(1) space/ O(n) time
+- Find max value: time O(n) / space O(1)
+- Tree breadth first: time O(n) / space O(1)
 
 ### Binary Search Trees
 
@@ -54,11 +63,17 @@ A Binary Search Tree (BST) is a type of tree that does have some structure attac
 - Contains
   - Argument: value
   - Returns: boolean indicating whether or not the value is in the tree at least once.
-- find maximum value
+- Find maximum value
   - Arguments: none
   - Returns: number
+- Tree breadth first
+  - Arguments: tree
+  - Return: list of all values in the tree, in the order they were encountered
 
 ## Whiteboard Process
 
 Find maximum value  
 ![find maximum value](find_maximum_value.png)
+
+Tree breadth first
+![Tree breadth first](tree_breadth_first.png)
