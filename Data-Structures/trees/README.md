@@ -31,6 +31,19 @@ Write a function called breadth first
   - Arguments: tree
   - Return: list of all values in the tree, in the order they were encountered
 
+## Challenge 18
+
+Write a function called fizz buzz tree
+
+- Tree FizzBuzz
+  - Arguments: k-ary tree
+  - Return: new k-ary tree
+
+If the value is divisible by 3, replace the value with “Fizz”  
+If the value is divisible by 5, replace the value with “Buzz”  
+If the value is divisible by 3 and 5, replace the value with “FizzBuzz”  
+If the value is not divisible by 3 or 5, simply turn the number into a String.
+
 ## Approach & Efficiency
 
 ### Depth First
@@ -46,6 +59,7 @@ Write a function called breadth first
 - The Big O time complexity of a Binary Search Tree’s insertion and search operations is O(h), or O(height). In the worst case, we will have to search all the way down to a leaf, which will require searching through as many nodes as the tree is tall. In a balanced (or “perfect”) tree, the height of the tree is log(n). In an unbalanced tree, the worst case height of the tree is n.
 - Find max value: time O(n) / space O(1)
 - Tree breadth first: time O(n) / space O(1)
+- Tree FizzBuzz : time O(n) / space O(1)
 
 ### Binary Search Trees
 
@@ -69,6 +83,13 @@ A Binary Search Tree (BST) is a type of tree that does have some structure attac
 - Tree breadth first
   - Arguments: tree
   - Return: list of all values in the tree, in the order they were encountered
+- Tree FizzBuzz
+  - Arguments: k-ary tree
+  - Return: new k-ary tree  
+    If the value is divisible by 3, replace the value with “Fizz”  
+    If the value is divisible by 5, replace the value with “Buzz”  
+    If the value is divisible by 3 and 5, replace the value with “FizzBuzz”  
+    If the value is not divisible by 3 or 5, simply turn the number into a String.
 
 ## Whiteboard Process
 
@@ -77,3 +98,6 @@ Find maximum value
 
 Tree breadth first
 ![Tree breadth first](tree_breadth_first.png)
+
+Tree FizzBuzz
+![Tree FizzBuzz](tree_fizz_buzz.png)
