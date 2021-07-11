@@ -12,6 +12,8 @@ O(n\*n)
 
 ## Solution
 
-[code]()
+[code](https://github.com/Abdullah-AlSawalmeh/data-structures-and-algorithms/blob/main/challenges/challenges/insertion_sort.py)
 
-[test code]()
+[test code](https://github.com/Abdullah-AlSawalmeh/data-structures-and-algorithms/blob/main/challenges/tests/test_challenges.py)
+
+[Blog](https://github.com/Abdullah-AlSawalmeh/data-structures-and-algorithms/blob/main/challenges/challenges/whiteboards/insertion_sort_article.md)
