@@ -9,3 +9,4 @@
 | Stacks-And-Queues    |               [Click here](https://abdullah-alsawalmeh.github.io/data-structures-and-algorithms/Data-Structures/stacks-and-queues)                |
 | trees                |                     [Click here](https://abdullah-alsawalmeh.github.io/data-structures-and-algorithms/Data-Structures/trees)                      |
 | CC26: Insertion Sort | [Click here](https://github.com/Abdullah-AlSawalmeh/data-structures-and-algorithms/blob/main/challenges/challenges/whiteboards/insertion_sort.md) |
+| CC27: merge Sort | [Click here](https://github.com/Abdullah-AlSawalmeh/data-structures-and-algorithms/blob/main/challenges/challenges/whiteboards/merge_sort.md) |
