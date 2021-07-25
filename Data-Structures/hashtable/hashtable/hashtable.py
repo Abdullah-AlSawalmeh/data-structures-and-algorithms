@@ -38,7 +38,7 @@ class Hashtable:
         if not self.map[hashed_key]:
             return False
         else:
-            if self.map[hashed_key].req_node(key)[1]:
+            if self.map[hashed_key].req_node(key)[0]:
                 return True
             else:
                 return False
