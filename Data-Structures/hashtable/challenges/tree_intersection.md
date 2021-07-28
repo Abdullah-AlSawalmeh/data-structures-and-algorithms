@@ -17,3 +17,7 @@ Test Cases `tree_intersection:
 2. Verify that the function will return an empty set if the two lists have no intersection.
 3. Verify that the function will raise an exception if one of the trees is empty.
 4. Verify that the function will return the same tree if we compared the tree with itself.
+
+
+[Code](./tree_intersection.py)  
+[Tests](../tests/test_hashtable.py)  
