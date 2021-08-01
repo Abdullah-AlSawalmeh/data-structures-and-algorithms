@@ -3,15 +3,14 @@ import pytest
 
 """
 Test Cases:
-    1. Can create a Graph.
-    2. Can add a node.
-    3. Can get size.
-    4. Can add edge between two nodes.
-    5. Can add multiple edges.
-    6. Can get list of nodes in the graph with their weights.
-    7. Can get list of neighbor-nodes of a specific nodes.
-    8. Can return True is there is a path between two nodes.
-    9. Can return False is there is no path between two nodes.
+    Node can be successfully added to the graph
+    An edge can be successfully added to the graph
+    A collection of all nodes can be properly retrieved from the graph
+    All appropriate neighbors can be retrieved from the graph
+    Neighbors are returned with the weight between nodes included
+    The proper size is returned, representing the number of nodes in the graph
+    A graph with only one node and edge can be properly returned
+    An empty graph properly returns null
 """
 
 def test_add_node():
@@ -94,16 +93,3 @@ def test_get_neighbors_no_neighbors():
     assert len(neighbors) == 0
     assert neighbors == []
 
-def test_is_path_bfs_true():
-    graph = Graph()
-    n1 = graph.add_node(1)
-    n2 = graph.add_node(2)
-    graph.add_edge(n1, n2)
-    assert (graph.isPathBFS(n1, n2)) == True
-
-def test_is_path_bfs_false():
-    graph = Graph()
-    n1 = graph.add_node(1)
-    n2 = graph.add_node(2)
-    graph.add_edge(n1, n2)
-    assert (graph.isPathBFS(n2, n1)) == False
