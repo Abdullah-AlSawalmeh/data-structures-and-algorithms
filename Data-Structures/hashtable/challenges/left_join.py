@@ -50,6 +50,7 @@ def left_join(hash1,hash2):
     output = []
 
     for element in hash1.map:
+        print(element)
 
         if element != None:
 

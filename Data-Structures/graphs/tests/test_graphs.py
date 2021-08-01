@@ -15,7 +15,7 @@ Test Cases:
 
 def test_add_node():
     graph = Graph()
-    assert graph.add_node('batool').value == 'batool'
+    assert graph.add_node('abdullah').value == 'abdullah'
 
 def test_size_empty():
     graph = Graph()
@@ -24,10 +24,10 @@ def test_size_empty():
 
 def test_size():
     graph = Graph()
-    graph.add_node('batool')
+    graph.add_node('abdullah')
     assert graph.size() == 1
 
-    graph.add_node('malkawi')
+    graph.add_node('sawalmeh')
     assert graph.size() == 2
 
 
@@ -55,8 +55,8 @@ def test_add_one_edge():
 
 def test_add_edge():
     graph = Graph()
-    end = graph.add_node('batool')
-    start = graph.add_node('malkawi')
+    end = graph.add_node('abdullah')
+    start = graph.add_node('sawalmeh')
     graph.add_edge(start, end)
     assert graph.adjacency_list[start][0] == (end, 1)
     assert graph.get_neighbors(start) == [(end, 1)]
