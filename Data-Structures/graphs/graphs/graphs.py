@@ -1,18 +1,3 @@
-from collections import deque
-
-class Queue():
-    def __init__(self):
-        self.dq = deque()
-
-    def enqueue(self, value):
-        self.dq.appendleft(value) # O(1)
-
-    def dequeue(self):
-        return self.dq.pop()
-
-    def __len__(self):
-        return len(self.dq)
-
 class Node:
     def __init__(self, value):
         self.value = value
@@ -48,36 +33,41 @@ class Graph:
     def get_neighbors(self, vertex):
         return self.adjacency_list[vertex]
 
-    def bfs(self, start_node):
-        nodes = []  
-        visited = set()
-        breadth = Queue()
-        breadth.enqueue(start_node)
-        visited.add(start_node)
-        while len(breadth)>0: 
-            node = breadth.dequeue() 
-            nodes.append(node) 
-            for n in self.adjacency_list[node]: 
-                if n not in visited: 
-                    breadth.enqueue(n) 
-                    visited.add(n)
-        return nodes
 
-    def isPathBFS(self, from_node, to_node):
-        queue = []
-        visited = []
-        queue.append(from_node)
-        visited.append(from_node)
+    def __str__(self):
+        output = ''
+        for vertix in self.adjacency_list:
+            # print(vertix.value)
+            print(f' \n {vertix.value} ==>')
+            for i in self.adjacency_list.get(vertix):
+                print(i[0].value, end = ' ')
 
-        while(queue != []):
-            dequeued = queue.pop(0)
+        return output
 
-        for neighbor in self.get_neighbors(dequeued):
-            if neighbor[0] == to_node:
-                return True
 
-            if neighbor not in visited:
-                queue.append(neighbor)
-                visited.append(neighbor)
 
-        return False
+if __name__ == '__main__':
+    graph = Graph()
+    a = graph.add_node('a')
+    b = graph.add_node('b')
+    c = graph.add_node('c')
+    d = graph.add_node('d')
+    e = graph.add_node('e')
+    f = graph.add_node('f')
+    graph.add_edge(a, c)
+    graph.add_edge(a, d)
+    graph.add_edge(b, c)
+    graph.add_edge(b, f)
+    graph.add_edge(c, a)
+    graph.add_edge(c, b)
+    graph.add_edge(c, e)
+    graph.add_edge(d, a)
+    graph.add_edge(d, e)
+    graph.add_edge(e, c)
+    graph.add_edge(e, d)
+    graph.add_edge(e, f)
+    graph.add_edge(f, b)
+    graph.add_edge(f, e)
+
+    print(graph)
+    # print(graph.adjacency_list)
