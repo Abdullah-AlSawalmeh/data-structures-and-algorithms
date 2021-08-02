@@ -18,11 +18,11 @@ Ih this project, we created a data structure called **Graph** in Python. We used
         * `GetNodes()`: Returns all of the nodes in the graph as a collection (set, list, or similar)
         * `GetNeighbors()`: Returns a collection of edges connected to the given node, Takes in a given node, Include the weight of the connection in the returned collection
         * `Size()`: Returns the total number of nodes in the graph.
-
+        * Gets nodes in breadth first approach
 
 **User acceptance tests** are included with the following test cases:
 
-*Graph* test cases:
+_Graph_ test cases:
 
     Node can be successfully added to the graph
     An edge can be successfully added to the graph
@@ -32,3 +32,22 @@ Ih this project, we created a data structure called **Graph** in Python. We used
     The proper size is returned, representing the number of nodes in the graph
     A graph with only one node and edge can be properly returned
     An empty graph properly returns null
+
+#### breadth_first
+
+## Challenge
+
+- to return the graph nodes in breadth first approach
+
+![alt text](breadth_first.png)
+
+#### Efficiency for breadth first
+
+- Time: O(N)
+- Space: O(N)
+
+## Solution
+
+### to return all nodes after a specific node in a graph as breadth first approach then:
+
+- use `graph.breadth_first(node)`

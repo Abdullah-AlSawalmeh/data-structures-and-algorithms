@@ -1,3 +1,18 @@
+from collections import deque
+
+class Queue():
+    def __init__(self):
+        self.dq = deque()
+
+    def enqueue(self, value):
+        self.dq.appendleft(value) # O(1)
+
+    def dequeue(self):
+        return self.dq.pop()
+
+    def __len__(self):
+        return len(self.dq)
+
 class Node:
     def __init__(self, value):
         self.value = value
@@ -34,6 +49,26 @@ class Graph:
         return self.adjacency_list[vertex]
 
 
+    def breadth_first(self,node):
+        queue = Queue()
+        queue.enqueue(node)
+        visited  = set()
+        visited.add(node)
+        node_list = []
+        def inner_func(queue,visited,node_list):
+            for index in range(len(queue)):
+                node = queue.dequeue()
+                node_list.append(node)
+                neighbors = self.get_neighbors(node)
+                for edge in neighbors:
+                    if edge[0] not in visited:
+                        queue.enqueue(edge[0])
+                        visited.add(edge[0])
+            if len(queue) > 0:
+                inner_func(queue,visited,node_list)
+        inner_func(queue,visited,node_list)
+        return node_list
+
     def __str__(self):
         output = ''
         for vertix in self.adjacency_list:
@@ -47,6 +82,35 @@ class Graph:
 
 
 if __name__ == '__main__':
+    # graph = Graph()
+    # a = graph.add_node('a')
+    # b = graph.add_node('b')
+    # c = graph.add_node('c')
+    # d = graph.add_node('d')
+    # e = graph.add_node('e')
+    # f = graph.add_node('f')
+    # g = graph.add_node('g')
+    # h = graph.add_node('h')
+    # i = graph.add_node('i')
+    # k = graph.add_node('k')
+    # graph.add_edge(a, b)
+    # graph.add_edge(a, c)
+    # graph.add_edge(a,e)
+    # graph.add_edge(b, d)
+    # graph.add_edge(c, f)
+    # graph.add_edge(c, b)
+    # graph.add_edge(e,g)
+    # graph.add_edge(f,h)
+    # graph.add_edge(g,h)
+    # graph.add_edge(f,i)
+    # graph.add_edge(h,k)
+    # graph.add_edge(i,k)
+    # # print(graph.breadth_first(a)[0].value)
+    # # print(graph.breadth_first(a)[1].value)
+    # # print(graph.breadth_first(a)[2].value)
+    # # print(graph.breadth_first(a)[3].value)
+    
+
     graph = Graph()
     a = graph.add_node('a')
     b = graph.add_node('b')
@@ -68,6 +132,7 @@ if __name__ == '__main__':
     graph.add_edge(e, f)
     graph.add_edge(f, b)
     graph.add_edge(f, e)
-
-    print(graph)
+    print(len(graph.breadth_first(a)))
+# 
+#     print(graph)
     # print(graph.adjacency_list)
