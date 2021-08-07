@@ -19,6 +19,7 @@ Ih this project, we created a data structure called **Graph** in Python. We used
         * `GetNeighbors()`: Returns a collection of edges connected to the given node, Takes in a given node, Include the weight of the connection in the returned collection
         * `Size()`: Returns the total number of nodes in the graph.
         * Gets nodes in breadth first approach
+        * `depth_first()`: accepts an adjacency list as a graph, and conducts a depth first traversal and returns a collection of nodes in their pre-order depth-first traversal order.
 
 **User acceptance tests** are included with the following test cases:
 
@@ -51,3 +52,22 @@ _Graph_ test cases:
 ### to return all nodes after a specific node in a graph as breadth first approach then:
 
 - use `graph.breadth_first(node)`
+
+#### depth_first
+
+## Challenge
+
+- to return the nodes in a graph as pre-order depth fisrt approach then:
+
+![alt text](depth_first.png)
+
+#### Efficiency for breadth first
+
+- Time: O(V + E)
+- Space: O(V)
+
+## Solution
+
+### to return all nodes after a specific node in a graph as breadth first approach then:
+
+- use `graph.depth_first(node)`
